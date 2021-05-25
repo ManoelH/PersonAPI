@@ -22,18 +22,14 @@ public class DataBaseConfiguration {
 	@Profile("dev")
 	@Bean
 	public String testDataBaseConnection() {
-		System.out.println(driverClassName);
-		System.out.println(username);
-		System.out.println(password);
+		System.out.println("Development Database Connected");
 		return "Development Database Connected";
 	}
 	
 	@Profile("prod")
 	@Bean
 	public String productionDataBaseConnection() {
-		System.out.println(driverClassName);
-		System.out.println(username);
-		System.out.println(password);
+		System.out.println("Production Database Connected");
 		return "Production Database Connected";
 	}
 } 

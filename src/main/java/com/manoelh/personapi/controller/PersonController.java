@@ -1,7 +1,7 @@
 package com.manoelh.personapi.controller;
 
 import com.manoelh.personapi.dto.MessageResponseDTO;
-import com.manoelh.personapi.entity.Person;
+import com.manoelh.personapi.dto.PersonDTO;
 import com.manoelh.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class PersonController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody Person person) {
-        return this.personService.createPerson(person);
+    public MessageResponseDTO createPerson(@RequestBody PersonDTO personDTO) {
+        return this.personService.createPerson(personDTO);
     }
 }
